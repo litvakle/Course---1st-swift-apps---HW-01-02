@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,69 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Course___1st_swift_apps___HW_01_02" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="1iU-Re-7DE">
+                                <rect key="frame" x="147" y="64" width="120" height="430"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hjw-VU-utk">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fzu-Uo-3aj">
+                                        <rect key="frame" x="0.0" y="155" width="120" height="120"/>
+                                        <color key="backgroundColor" red="0.94190244083132779" green="1" blue="0.36063916869825385" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHf-Nw-OYP">
+                                        <rect key="frame" x="0.0" y="310" width="120" height="120"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1iU-Re-7DE" secondAttribute="height" multiplier="12:43" id="yg9-HN-9B9"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85j-dU-UyR">
+                                <rect key="frame" x="147" y="754" width="120" height="48"/>
+                                <color key="backgroundColor" red="0.30591096800000001" green="0.63726578899999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="3R1-fg-1i4"/>
+                                    <constraint firstAttribute="width" secondItem="85j-dU-UyR" secondAttribute="height" multiplier="5:2" id="bsq-TM-kpb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NXh-tR-Gay"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1iU-Re-7DE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="98k-OZ-3ZE"/>
+                            <constraint firstItem="Fzu-Uo-3aj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="15:112" id="CyG-2o-znR"/>
+                            <constraint firstItem="gHf-Nw-OYP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="15:112" id="J7e-dU-WpL"/>
+                            <constraint firstItem="85j-dU-UyR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TzQ-Lb-9mj"/>
+                            <constraint firstItem="1iU-Re-7DE" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="15:112" id="bCh-ZW-76f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="85j-dU-UyR" secondAttribute="bottom" constant="60" id="iOZ-X6-PRM"/>
+                            <constraint firstItem="Hjw-VU-utk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="15:112" id="sjT-lo-cCT"/>
+                            <constraint firstItem="1iU-Re-7DE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="spb-Ex-6Oj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="greenView" destination="gHf-Nw-OYP" id="Qsw-1k-R4B"/>
+                        <outlet property="nextButton" destination="85j-dU-UyR" id="nFc-IO-Qy1"/>
+                        <outlet property="redView" destination="Hjw-VU-utk" id="cSG-b3-WOC"/>
+                        <outlet property="yellowView" destination="Fzu-Uo-3aj" id="Xxm-ON-UAq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-35" y="129"/>
         </scene>
     </scenes>
 </document>
