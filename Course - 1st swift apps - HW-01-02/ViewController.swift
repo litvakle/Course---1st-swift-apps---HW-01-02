@@ -10,31 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var redView: UIView!
-    @IBOutlet weak var yellowView: UIView!
-    @IBOutlet weak var greenView: UIView!
-    @IBOutlet weak var nextButton: UIButton!
-    
     enum colors {
         case red, yellow, green, none
     }
     
     var currentColor = colors.none
-    let cornerRadiusForViews: CGFloat = 60
-    let cornerRariusForButtons: CGFloat = 10
     let alphaValueForNotActiveViews: CGFloat = 0.3
     let alphaValueForActiveViews: CGFloat = 1
     
+    @IBOutlet weak var redView: UIView!
+    @IBOutlet weak var yellowView: UIView!
+    @IBOutlet weak var greenView: UIView!
+    @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        redView.layer.cornerRadius = cornerRadiusForViews
-        yellowView.layer.cornerRadius = cornerRadiusForViews
-        greenView.layer.cornerRadius = cornerRadiusForViews
-        
         redView.alpha = alphaValueForNotActiveViews
         yellowView.alpha = alphaValueForNotActiveViews
         greenView.alpha = alphaValueForNotActiveViews
-        nextButton.layer.cornerRadius = cornerRariusForButtons
+        nextButton.layer.cornerRadius = 10
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        redView.layer.cornerRadius = redView.frame.width / 2
+        yellowView.layer.cornerRadius = yellowView.frame.width / 2
+        greenView.layer.cornerRadius = greenView.frame.width / 2
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {

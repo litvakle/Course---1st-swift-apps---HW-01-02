@@ -16,24 +16,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="1iU-Re-7DE">
-                                <rect key="frame" x="147" y="64" width="120" height="430"/>
+                                <rect key="frame" x="144" y="64" width="126" height="448"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hjw-VU-utk">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="126" height="126"/>
                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Hjw-VU-utk" secondAttribute="height" multiplier="1:1" id="fDe-O6-dc9"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fzu-Uo-3aj">
-                                        <rect key="frame" x="0.0" y="155" width="120" height="120"/>
+                                        <rect key="frame" x="0.0" y="161" width="126" height="126"/>
                                         <color key="backgroundColor" red="0.94190244083132779" green="1" blue="0.36063916869825385" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Fzu-Uo-3aj" secondAttribute="height" multiplier="1:1" id="X7h-Qk-Ijt"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gHf-Nw-OYP">
-                                        <rect key="frame" x="0.0" y="310" width="120" height="120"/>
+                                        <rect key="frame" x="0.0" y="322" width="126" height="126"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gHf-Nw-OYP" secondAttribute="height" multiplier="1:1" id="kbU-AI-HdB"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="1iU-Re-7DE" secondAttribute="height" multiplier="12:43" id="yg9-HN-9B9"/>
-                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85j-dU-UyR">
                                 <rect key="frame" x="147" y="754" width="120" height="48"/>
@@ -52,14 +58,11 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1iU-Re-7DE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="98k-OZ-3ZE"/>
-                            <constraint firstItem="Fzu-Uo-3aj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="15:112" id="CyG-2o-znR"/>
-                            <constraint firstItem="gHf-Nw-OYP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="15:112" id="J7e-dU-WpL"/>
+                            <constraint firstItem="1iU-Re-7DE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Jn8-DG-bM2"/>
                             <constraint firstItem="85j-dU-UyR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TzQ-Lb-9mj"/>
-                            <constraint firstItem="1iU-Re-7DE" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="15:112" id="bCh-ZW-76f"/>
+                            <constraint firstItem="1iU-Re-7DE" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="30:60" id="XCZ-HW-WSY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="85j-dU-UyR" secondAttribute="bottom" constant="60" id="iOZ-X6-PRM"/>
-                            <constraint firstItem="Hjw-VU-utk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="15:112" id="sjT-lo-cCT"/>
-                            <constraint firstItem="1iU-Re-7DE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="spb-Ex-6Oj"/>
+                            <constraint firstItem="1iU-Re-7DE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="lzR-p3-jOK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
