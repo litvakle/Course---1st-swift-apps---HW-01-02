@@ -25,24 +25,30 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nextButton.layer.cornerRadius = 10
+        
         redView.alpha = alphaValueForNotActiveViews
         yellowView.alpha = alphaValueForNotActiveViews
         greenView.alpha = alphaValueForNotActiveViews
-        nextButton.layer.cornerRadius = 10
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
+        
         redView.layer.cornerRadius = redView.frame.width / 2
         yellowView.layer.cornerRadius = yellowView.frame.width / 2
         greenView.layer.cornerRadius = greenView.frame.width / 2
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
+        if nextButton.currentTitle == "Start" {
+            nextButton.setTitle("Next", for: .normal)
+        }
+        
         switch currentColor {
         case .none:
             redView.alpha = alphaValueForActiveViews
-            nextButton.setTitle("Next", for: .normal)
             currentColor = .red
         case .red:
             redView.alpha = alphaValueForNotActiveViews
